@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Wayne Enterprises :: New Hire Packet</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/normalize.css" rel="stylesheet"/>
-  <link href="styles/foundation.css" rel="stylesheet"/>
-  <link href="styles/NewHirePacket.css" rel="stylesheet"/>
-  <script src="js/custom.modernizr.js"></script>
-  <script src="js/jquery.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wayne Enterprises :: New Hire Packet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="import" href="web_components/signify/signify.html">
+
+    <link href="styles/normalize.css" rel="stylesheet"/>
+    <link href="styles/foundation.css" rel="stylesheet"/>
+    <link href="styles/NewHirePacket.css" rel="stylesheet"/>
+    <script src="js/custom.modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+
+
 </head>
 <body>
 
 <div class="row" style="margin-bottom: 15px;">
-  <div class="large-12 columns">
-    <nav class="top-bar" data-topbar>
+    <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
 
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">Wayne Enterprises</a></h1>
-        </li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="has-dropdown">
-            <a href="#">Welcome, Bruce Wayne</a>
-            <ul class="dropdown">
-              <li><a href="#">Update account</a></li>
-              <li><a href="#">Logout</a></li>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">Wayne Enterprises</a></h1>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </section>
-    </nav>
-  </div>
+
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="has-dropdown">
+                        <a href="#">Welcome, Bruce Wayne</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Update account</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
 </div>
 
 <div class="row">
-  <div class="large-12 columns">
-    <div class="off-canvas-wrap">
-      <div class="inner-wrap">
+    <div class="large-12 columns">
+        <div class="off-canvas-wrap">
+            <div class="inner-wrap">
 
-        <!-- Off Canvas Menu -->
-        <aside class="left-off-canvas-menu">
-          <ol id="forms-menu" class="forms-list">
-            <li><a href="#" data-form-id="personal-information-form">Personal Information</a></li>
-            <li><a href="#" data-form-id="direct-deposit-form">Direct Deposit</a></li>
-          </ol>
+                <!-- Off Canvas Menu -->
+                <aside class="left-off-canvas-menu">
+                    <ol id="forms-menu" class="forms-list">
+                        <li><a href="#" data-form-id="personal-information-form">Personal Information</a></li>
+                        <li><a href="#" data-form-id="direct-deposit-form">Direct Deposit</a></li>
+                    </ol>
 
-          <img class="logo" src="images/wayne-logo.png">
-        </aside>
+                    <img class="logo" src="images/wayne-logo.png">
+                </aside>
 
-        <!-- main content goes here -->
-        <div id="main-content">
-          <div id="welcome">
-            <p>Welcome to Wayne Enterprises! We're excited to have you on our team.</p>
-            <p>There are many forms to fill out on your first day so let's get started.</p>
-          </div>
+                <!-- main content goes here -->
+                <div id="main-content">
+                    <div id="welcome">
+                        <p>Welcome to Wayne Enterprises! We're excited to have you on our team.</p>
 
-          <a class="left-off-canvas-toggle button" id="toggle-forms-btn">New Hire Forms</a>
+                        <p>There are many forms to fill out on your first day so let's get started.</p>
+                    </div>
 
-          <%= erb :_personal_info %>
-          <%= erb :_direct_deposit %>
+                    <a class="left-off-canvas-toggle button" id="toggle-forms-btn">New Hire Forms</a>
+
+                    <%= erb :_personal_info %>
+                    <%= erb :_direct_deposit %>
+                </div>
+
+                <!-- close the off-canvas menu -->
+                <a class="exit-off-canvas"></a>
+            </div>
         </div>
-
-        <!-- close the off-canvas menu -->
-        <a class="exit-off-canvas"></a>
-      </div>
     </div>
-  </div>
 </div>
 
 
 <script src="js/foundation.min.js"></script>
 <script src="js/NewHirePacket.js"></script>
 <script>
-  $(function() {
-      Navigation.init();
-  });
+    $(function () {
+        Navigation.init();
+
+//        Signify.init();
+    });
 </script>
 </body>
 </html>

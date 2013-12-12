@@ -1,28 +1,31 @@
-<div class="signature-section">
-    <section class="input-group">
-        <div class="input-line">
-            <input type="text" value="Bruce Wayne"/>
-        </div>
-        <div class="input-line-label">
-            Printed Name
-        </div>
-    </section>
+<template id="signifyTmpl">
+    <div class="signify-container">
+        <section class="input-group">
+            <div class="input-line">
+                <input type="text" value="Bruce Wayne"/>
+            </div>
+            <div class="input-line-label">
+                Printed Name
+            </div>
+        </section>
 
-    <section class="input-group">
-        <div class="input-line">
+        <section class="input-group">
+            <div class="input-line">
+                <canvas id="sig-draw" height="150" style=" width: 97%; border: 1px dashed crimson"></canvas>
+            </div>
+            <div class="input-line-label">
+                Signature
+            </div>
+        </section>
 
-        </div>
-        <div class="input-line-label">
-            Signature
-        </div>
-    </section>
+        <section class="input-group">
+            <div class="input-line">
+                <input type="date" value=""/>
+            </div>
+            <div class="input-line-label">
+                Date
+            </div>
+        </section>
+    </div>
+</template>
 
-    <section class="input-group">
-        <div class="input-line">
-            <input type="date" value=""/>
-        </div>
-        <div class="input-line-label">
-            Date
-        </div>
-    </section>
-</div>

@@ -1,0 +1,97 @@
+
+<template id="signifyTmpl">
+    <style type="text/css">
+        DIV {
+            color: orange;
+        }
+    </style>
+
+    <div class="signify-container">
+        <section class="input-group">
+            <div class="input-line">
+                <input type="text" value="Bruce Wayne"/>
+            </div>
+            <div class="input-line-label">
+                Printed Name
+            </div>
+        </section>
+
+        <section class="input-group">
+            <div class="input-line">
+                <canvas id="sig-draw" height="150" style=" width: 97%; border: 1px dashed crimson"></canvas>
+            </div>
+            <div class="input-line-label">
+                Signature
+            </div>
+        </section>
+
+        <section class="input-group">
+            <div class="input-line">
+                <input type="date" value=""/>
+            </div>
+            <div class="input-line-label">
+                Date
+            </div>
+        </section>
+    </div>
+    <--
+    <style>
+
+        div {
+            color: orange;
+        }
+
+
+
+        /*.signify-container {*/
+        /*margin: 0 auto;*/
+        /*border: 1px solid dimgrey;*/
+        /*min-height: 100px;*/
+        /*}*/
+
+        /*.input-line {*/
+        /*border-bottom: 1px solid lightslategrey;*/
+        /*padding: 0 0 0 10px;*/
+        /*margin-bottom: 3px;*/
+        /*min-height: 2em;*/
+        /*}*/
+
+        /*.input-line input {*/
+        /*border: 0;*/
+        /*-webkit-box-shadow: none;*/
+        /*-moz-box-shadow: none;*/
+        /*box-shadow: none;*/
+        /*margin: 0;*/
+        /*padding: 0;*/
+        /*height: 3em;*/
+        /*width: 100%;*/
+        /*}*/
+
+        /*.input-line-label {*/
+        /*margin-left: 10px;*/
+        /*}*/
+
+        /*.input-group {*/
+        /*margin: 25px;*/
+        /*}*/
+    </style>
+    -->
+</template>
+
+<script>
+    console.log('importing');
+    var SignifyProto = Object.create(HTMLElement.prototype);
+
+    SignifyProto.createdCallback = function() {
+        var template = document.querySelector('template');
+        var shadowRoot = this.webkitCreateShadowRoot();
+        var content = template.content.cloneNode(true);
+        console.log(content);
+        shadowRoot.appendChild(content);
+
+    };
+
+    document.register('x-signify', {
+        prototype: SignifyProto
+    });
+</script>
