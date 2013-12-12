@@ -10,3 +10,8 @@
     opacity: .05;
     z-index: -1;
 }
+
+#main-content {
+    margin-left: 20px;
+    min-height: 500px;
+}
