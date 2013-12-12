@@ -1,0 +1,45 @@
+<form id="direct-deposit-form" style="display: none">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h2>Direct Deposit</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 columns">
+      <label for="account-1-number">1st Account Number</label>
+      <input type="text" name="account-1-number" pattern="\d"/>
+    </div>
+    <div class="medium-6 columns">
+      <label for="routing-1-number">Routing Number</label>
+      <input type="text" name="routing-number" pattern="\d" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-12 columns">
+      <label>1st Account Type</label>
+      <input type="radio" name="account-1-type" id="account-1-type-checking" value="checking">
+      <label for="account-1-type-checking">Checking</label>
+      <input type="radio" name="account-1-type" id="account-1-type-savings" value="savings">
+      <label for="account-1-type-savings">Savings</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 columns">
+      <label for="account-2-number">2nd Account Number</label>
+      <input type="text" name="account-2-number" pattern="\d"/>
+    </div>
+    <div class="medium-6 columns">
+      <label for="routing-2-number">Routing Number</label>
+      <input type="text" name="routing-2-number" pattern="\d" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-12 columns">
+      <label>2nd Account Type</label>
+      <input type="radio" name="account-2-type" id="account-2-type-checking" value="checking">
+      <label for="account-2-type-checking">Checking</label>
+      <input type="radio" name="account-2-type" id="account-2-type-savings" value="savings">
+      <label for="account-2-type-savings">Savings</label>
+    </div>
+  </div>
+</form>

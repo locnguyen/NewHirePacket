@@ -1,0 +1,11 @@
+.forms-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    opacity: .05;
+}
